@@ -1,0 +1,20 @@
+package org.example.resumemodifierbackend.model;
+
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public class ResumeData {
+    private UserInfo userInfo;
+    private List<Achievement> achievements;
+    private List<Award> award;
+    private List<Certification> certifications;
+    private List<Education> education;
+    private List<Project> projects;
+    private List<Publication> publications;
+    private List<Reference> references;
+    private List<String> skills;
+    private List<Volunteering> volunteering;
+    private List<WorkExperience> workExperience;
+}

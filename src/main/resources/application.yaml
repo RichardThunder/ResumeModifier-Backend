@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ResumeModifier-Backend
+#  datasource:
+#    url: localhost:3306/resumeModifier
+#    username: root
+#    password: secret
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+gemini:
+  api:
+    url: ${GEM_API_URL}
+    key: ${GEM_API_KEY}

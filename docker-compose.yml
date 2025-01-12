@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  springboot-app:
+    build: .
+    container_name: springboot-app
+    ports:
+      - "8080:8080"
+    # 如果需要环境变量
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+
+    # 如果要和其他服务（数据库等）在同一网络
+    networks:
+      - springboot-net
+
+networks:
+  springboot-net:
