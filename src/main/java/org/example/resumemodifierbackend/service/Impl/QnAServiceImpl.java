@@ -13,7 +13,8 @@ import java.util.Map;
 @Service
 @Slf4j
 public class QnAServiceImpl implements QnAService {
-    private WebClientHelper webClientHelper;
+
+    private final WebClientHelper webClientHelper;
     QnAServiceImpl(WebClientHelper webClientHelper) {
         this.webClientHelper = webClientHelper;
     }

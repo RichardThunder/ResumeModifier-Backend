@@ -18,8 +18,8 @@ import java.util.Map;
 @Service
 @Slf4j
 public class PDFPareserServiceImpl {
-    private WebClientHelper webClientHelper;
-    private JsonToObj jsonToObj;
+    private final WebClientHelper webClientHelper;
+    private final JsonToObj jsonToObj;
     PDFPareserServiceImpl(WebClientHelper webClientHelper,JsonToObj jsonToObj) {
         this.webClientHelper = webClientHelper;
         this.jsonToObj = jsonToObj;

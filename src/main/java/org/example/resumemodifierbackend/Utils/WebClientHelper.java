@@ -1,5 +1,6 @@
 package org.example.resumemodifierbackend.Utils;
 
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -8,14 +9,11 @@ import java.util.Map;
 
 @Component
 public class WebClientHelper {
-    private final WebClient webClient;
+    @Resource
+    private  WebClient webClient;
     @Value("${gemini.api.key}")
     private String geminiAPIKEY;
-    @Value("${gemini.api.url}")
-    private String geminiAPIURL;
-    public WebClientHelper(WebClient.Builder webClient) {
-        this.webClient = webClient.build();
-    }
+
 
     public String makeRequest(Map<String ,Object> resonseBody) {
         return webClient.post()

@@ -5,7 +5,7 @@ WORKDIR /build
 # 复制 pom.xml 并下载依赖（利用缓存）
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
-
+#
 # 再复制源码
 COPY src ./src
 
