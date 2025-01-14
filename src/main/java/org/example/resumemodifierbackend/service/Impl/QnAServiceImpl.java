@@ -21,12 +21,7 @@ public class QnAServiceImpl implements QnAService {
 
     public String getAnswer(String question) {
         //build request body
-        Map<String, Object> requestBody = Map.of(
-                "contents", List.of(
-                        Map.of("parts", List.of(
-                                Map.of("text", question)))
-                )
-        );
+        Map<String, Object> requestBody =webClientHelper.buildRequestBody(question);
         //make request to server
         return webClientHelper.makeRequest(requestBody);
     }

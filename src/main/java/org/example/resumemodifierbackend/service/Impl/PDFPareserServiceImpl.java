@@ -38,18 +38,7 @@ public class PDFPareserServiceImpl {
                 + "in this JSON format +"
                 + "{ \"userInfo\": {\n    \"firstName\": \"str\",\n    \"lastName\": \"str\",\n    \"headLine\": \"str\",\n    \"phoneNumber\": \"str\",\n    \"email\": \"str\",\n    \"linkedInURL\": \"str\",\n    \"websiteOrOtherProfileURL\": \"str\"\n  },\n  \"achievements\": [\n    {\n      \"achievement\": \"str\"\n    }\n  ],\n  \"award\": [\n    {\n      \"name\": \"str\",\n      \"issuer\": \"str\",\n      \"urlToAward\": \"str\",\n      \"dateOfAward\": \"str\",\n      \"description\": \"str\"\n    }\n  ],\n  \"certifications\": [\n    {\n      \"name\": \"str\",\n      \"issuer\": \"str\",\n      \"date\": \"str\",\n      \"expiryDate\": \"str\",\n      \"url\": \"str\",\n      \"description\": \"str\"\n    }\n  ],\n  \"education\": [\n    {\n      \"institutionName\": \"str\",\n      \"fieldOfStudy\": \"str\",\n      \"degree\": \"str\",\n      \"grade\": \"str\",\n      \"city\": \"str\",\n      \"country\": \"str\",\n      \"fromDate\": \"str\",\n      \"toDate\": \"str\",\n      \"isPresent\": \"str\",\n      \"description\": \"str\"\n    }\n  ],\n  \"projects\": [\n    {\n      \"title\": \"str\",\n      \"projectRole\": \"str\",\n      \"city\": \"str\",\n      \"country\": \"str\",\n      \"fromDate\": \"str\",\n      \"toDate\": \"str\",\n      \"isPresent\": \"bool\",\n      \"description\": \"str\"\n    }\n  ],\n  \"publications\": [\n    {\n      \"name\": \"str\",\n      \"url\": \"str\",\n      \"publisher\": \"str\",\n      \"date\": \"str\"\n    }\n  ],\n  \"references\": [\n    {\n      \"company\": \"str\",\n      \"personName\": \"str\",\n      \"roleOfPerson\": \"str\",\n      \"email\": \"str\",\n      \"phoneNumber\": \"str\",\n      \"description\": \"str\"\n    }\n  ],\n  \"skills\": [\n   \"str\",  ],\n  \"volunteering\": [\n    {\n      \"name\": \"str\",\n      \"role\": \"str\",\n      \"city\": \"str\",\n      \"country\": \"str\",\n      \"fromDate\": \"str\",\n      \"toDate\": \"str\",\n      \"description\": \"str\"\n    }\n  ],\n  \"workExperience\": [\n    {\n      \"companyName\": \"str\",\n      \"jobTitle\": \"str\",\n      \"city\": \"str\",\n      \"country\": \"str\",\n      \"fromDate\": \"str\",\n      \"toDate\": \"str\",\n      \"isPresent\": \"bool\",\n      \"description\": \"str\"\n    }\n  ]\n}";
 
-        Map<String, Object> requestBody = Map.of(
-                "contents", List.of(
-                        Map.of(
-                                "parts", List.of(
-                                        Map.of("text", largeText)
-                                )
-                        )
-                ),
-                "generationConfig", Map.of("response_mime_type", "application/json")
-        );
-
-
+        Map<String, Object> requestBody= webClientHelper.buildRequestBody(largeText);
     //use body to mono to get response
         String response =  webClientHelper.makeRequest(requestBody);
         log.info("Response from Gemini: {}",response);

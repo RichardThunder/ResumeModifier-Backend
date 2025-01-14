@@ -1,10 +1,12 @@
 package org.example.resumemodifierbackend.model;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Data
+@Component
 public class ResumeData {
     private UserInfo userInfo;
     private List<Achievement> achievements;

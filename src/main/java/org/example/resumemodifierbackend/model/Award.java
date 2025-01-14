@@ -13,4 +13,7 @@ public class Award {
     private String urlToAward;
     private String dateOfAward;
     private String description;
+
+    private String comment;
+    private Integer score;
 }

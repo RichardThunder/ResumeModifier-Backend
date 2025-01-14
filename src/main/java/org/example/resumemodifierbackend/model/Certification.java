@@ -14,4 +14,7 @@ public class Certification {
     private String expiryDate;
     private String url;
     private String description;
+
+    private String comment;
+    private Integer score;
 }

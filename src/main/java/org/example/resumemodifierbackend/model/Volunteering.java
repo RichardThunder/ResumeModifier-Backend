@@ -15,4 +15,7 @@ public class Volunteering {
     private String fromDate;
     private String toDate;
     private String description;
+
+    private String comment;
+    private Integer score;
 }

@@ -9,18 +9,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInfo {
-  @JSONField(name = "firstName")
   private String firstName;
-  @JSONField(name = "lastName")
   private String lastName;
-  @JSONField(name = "headLine")
   private String headLine;
-  @JSONField(name = "phoneNumber")
   private String phoneNumber;
-  @JSONField(name = "email")
   private String email;
-  @JSONField(name = "linkedInURL")
   private String linkedInURL;
-  @JSONField(name = "websiteOrOtherProfileURL")
   private String websiteOrOtherProfileURL;
+
+  private String comment;
+  private Integer score;
 }

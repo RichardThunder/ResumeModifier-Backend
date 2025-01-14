@@ -11,4 +11,6 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class Achievement {
     private String achievement;
+    private String comment;
+    private Integer score;
 }

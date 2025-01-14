@@ -1,6 +1,9 @@
 spring:
   application:
     name: ResumeModifier-Backend
+  servlet:
+    multipart:
+      enabled: true
 #  datasource:
 #    url: localhost:3306/resumeModifier
 #    username: root

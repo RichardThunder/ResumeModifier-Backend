@@ -12,4 +12,7 @@ public class Publication {
     private String url;
     private String publisher;
     private String date;
+
+    private String comment;
+    private Integer score;
 }

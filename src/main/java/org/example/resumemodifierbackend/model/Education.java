@@ -18,4 +18,7 @@ public class Education {
    private String toDate;
    private String isPresent;
    private String description;
+
+   private String comment;
+   private Integer score;
 }

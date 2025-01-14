@@ -11,4 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Skill {
     private String skill;
+
+    private String comment;
+    private Integer score;
 }

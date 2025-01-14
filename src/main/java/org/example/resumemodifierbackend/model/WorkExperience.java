@@ -16,4 +16,7 @@ public class WorkExperience {
    private String toDate;
    private Boolean isPresent;
    private String description;
+
+   private String comment;
+   private Integer score;
 }
