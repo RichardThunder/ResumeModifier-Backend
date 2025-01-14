@@ -1,5 +1,6 @@
 package org.example.resumemodifierbackend.service.Impl;
 
+import jakarta.annotation.Resource;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -18,7 +19,9 @@ import java.util.Map;
 @Service
 @Slf4j
 public class PDFPareserServiceImpl {
+    @Resource
     private final WebClientHelper webClientHelper;
+    @Resource
     private final JsonToObj jsonToObj;
     PDFPareserServiceImpl(WebClientHelper webClientHelper,JsonToObj jsonToObj) {
         this.webClientHelper = webClientHelper;

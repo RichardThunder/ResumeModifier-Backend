@@ -8,6 +8,7 @@ import java.util.List;
 @Data
 @Component
 public class ResumeData {
+    private OverallAnalysis overallAnalysis;
     private UserInfo userInfo;
     private List<Achievement> achievements;
     private List<Award> award;
@@ -19,4 +20,5 @@ public class ResumeData {
     private List<String> skills;
     private List<Volunteering> volunteering;
     private List<WorkExperience> workExperience;
+
 }

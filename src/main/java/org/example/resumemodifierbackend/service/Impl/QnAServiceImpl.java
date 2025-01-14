@@ -1,5 +1,6 @@
 package org.example.resumemodifierbackend.service.Impl;
 
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.example.resumemodifierbackend.Utils.WebClientHelper;
 import org.example.resumemodifierbackend.service.QnAService;
@@ -13,12 +14,11 @@ import java.util.Map;
 @Service
 @Slf4j
 public class QnAServiceImpl implements QnAService {
-
+    @Resource
     private final WebClientHelper webClientHelper;
-    QnAServiceImpl(WebClientHelper webClientHelper) {
+    public QnAServiceImpl(WebClientHelper webClientHelper) {
         this.webClientHelper = webClientHelper;
     }
-
     public String getAnswer(String question) {
         //build request body
         Map<String, Object> requestBody =webClientHelper.buildRequestBody(question);

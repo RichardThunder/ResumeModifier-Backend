@@ -45,11 +45,13 @@ public class PDFController {
 
     }
     @PostMapping("/api/job_description_upload")
-    public Result<ResumeData> getJobDescription(@RequestPart("job_description") String job_description, @RequestPart("json") String json){
-        ResumeData rd = JSON.parseObject(json, ResumeData.class);
+    public Result<ResumeData> getJobDescription(@RequestParam("job_description") String job_description, @RequestParam("json") String json){
+        log.info("You successfully uploaded job description!:{}",json);
+        /*ResumeData rd = JSON.parseObject(json, ResumeData.class);
         JobDescription jobDescription  = new JobDescription(rd,job_description);
-        var result =  jobDescriptionsService.handleJobDescription(jobDescription);
-
+        ResumeData result =  jobDescriptionsService.handleJobDescription(jobDescription);
+        */
+        ResumeData result =  jobDescriptionsService.handleJobDescription(job_description,json);
         return Result.success(result);
     }
 
