@@ -4,7 +4,12 @@ spring:
   servlet:
     multipart:
       enabled: true
-#  datasource:
+  devtools:
+    restart:
+      enabled: true
+server:
+  port: 8080
+    #datasource:
 #    url: localhost:3306/resumeModifier
 #    username: root
 #    password: secret
